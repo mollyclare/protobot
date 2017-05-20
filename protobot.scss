@@ -20,12 +20,33 @@ body {
 @media (max-width: 700px) {
 
 	body {
-		font-size: 2.6em;
+		font-size: 3.3em;
 	}
 	.header-content {
 		width: $small-screen-width-percent - 20%;
 		margin: 0 $small-screen-width-margin 0 $small-screen-width-margin;
+		.author-bigscreen {
+			display:none;
+		}
+		
 	}
+	
+	.current-language {
+			display: none;
+			
+		}
+		.fa-angle-down.fa {
+			display: none;
+		}
+	
+	.language-dropdown {
+		width: 18em;
+		font-size: .9em;
+		top: 3em;
+
+		
+	}
+	
 	.wrapper {
 		width: $small-screen-width-percent;
 		margin: 0 $small-screen-width-margin 0 $small-screen-width-margin;
@@ -43,6 +64,15 @@ body {
 	.header-content {
 		width: $big-screen-width-percent - 15%;
 		margin: 0 $big-screen-width-margin 0 $big-screen-width-margin;
+		.author-smallscreen {
+			display:none;
+		}
+	}
+	.language-dropdown {
+		width: 12em;
+		font-size: .7em;
+		top: 3em;
+	
 	}
 	.wrapper {
 		width: $big-screen-width-percent;
@@ -64,9 +94,11 @@ div.header-bar {
 	margin: 0 auto;
 	position: relative;
 	.header-content {
-		
+		.sitename {
+			font-weight: 400;
+		}	
 	
-		padding: .2em 0 .3em 0;
+		padding: .3em 0 .6em 0;
 		font-size: .4em;
 		color: #666;
 		font-weight: 200;
@@ -85,7 +117,8 @@ div.header-bar {
 		font-weight: 200;
 		top: .4em;
 		right: .6em;
-			.current-language {
+		cursor: pointer;
+		.current-language {
 				
 			}
 			.fa {
@@ -97,6 +130,7 @@ div.header-bar {
 	a:hover {
 		border-bottom: 1px solid #968e84;
 	}
+	
 	
 }
 // RANDOMIZED TEXT
@@ -138,4 +172,30 @@ div.button {
 }
 div.button:hover {
 	background-color: #215563;
+}
+
+// LANGUAGE DROPDOWN
+
+div.language-dropdown {
+		position: absolute;
+		right: 0em;
+		padding: 1em;
+		margin: 0;
+			background-color: #ebe3d9;
+			border: 1px solid #d0c3b2;
+	
+		font-weight: 200;
+		text-transform: uppercase;
+		display: block;
+		text-align: right;
+
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			li {
+				margin: .4em 0;
+			}
+			
+		}
 }
