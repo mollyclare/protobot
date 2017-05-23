@@ -162,10 +162,10 @@ CONSTRAINT = [
 'Du nicht durch die Sicherheitkontrolle am Flughafen nehmen kannst'
 'Du nutzen kannst, um Deine Nachbarn verrückt zu machen',
 'Du in der U-Bahn benutzen kannst',
-'Deinen Großeltern missfallen würde',
+'Deine Großeltern sicher missbilligen würden',
 'Du nicht nutzen kannst',
 'Du süß finden würdest',
-'Dich schwitzen lässt',
+'Du nutzen kannst, um ins Schwitzen zu geraten',
 'Du auf langsamer, mittlerer, schneller und turbo-Einstellungen betreiben kannst',
 'Du auf hell, mittel oder dunkl einstellen kannst',
 'Du in mild, mittel oder scharf bekommen kannst',
