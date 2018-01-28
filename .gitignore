@@ -1,0 +1,5 @@
+*.pyc
+*~
+.*.swp
+/lib/simplejson/*
+.DS_Store
