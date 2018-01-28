@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-
 <html>
 <head>
+	<meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="protobot.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
 
     <title>Protobot: randomly generated design challenges</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,86 +12,18 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-    <script type="text/javascript">
-	    
-	     
   
-      
-   
-	    
-var onupdate = function(data){  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39317711-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    $("#intro").html("");
-    intro = data['intro'];
-    $("#intro").text(intro);
+  gtag('config', 'UA-39317711-2');
+</script>
 
-
-    $("#design-item").html("");
-    item = data['design-item'];
-
-    $("#design-item").text(item);
-
-    $("#constraint").html("");
-    constraint = data['constraint'];
-    $("#constraint").text(constraint);
-    $("#constraint").append(".");
-
-
-    var tweet_components = {
-        'hashtags': "hacker",
-        'original_referer': 'http://www.code.caseyc.net/whatshallihack/',
-        'source': 'tweetbutton',
-        'text': data['phrase'] + ". What will you hack?",
-        'url': 'http://www.whatshallihack.com/'
-    }
-
-    var base_url = 'https://twitter.com/intent/tweet?';
-
-    var comps = []  
-    for (var key in tweet_components){
-        comps.push(encodeURIComponent(key) + '=' + encodeURIComponent(tweet_components[key]));
-    }
-    base_url = base_url + comps.join('&');
-
-    $('#tweetlink').attr('href', base_url)      
-
-
-    }
-
-    function letsgo(){
-    $.ajax({
-        url: 'ajax.cgi?method=cycle',
-        success: onupdate,
-    })
-    
-    
-    
-       $( ".language-dropdown").hide();
-	  var menuShown = false;
-	    $(".header-language").click(function(){
-		    if(menuShown == false){
-			    $(".language-dropdown").show();
-			    menuShown = true;
-		    }
-		    else if(menuShown == true){
-			    $(".language-dropdown").hide();
-			    menuShown = false;
-		    }
-	    })
-	    $(".language-dropdown").click(function(){
-		   $(".language-dropdown").hide();
-		    menuShown = false;
-		    
-	    })
-      
-    }
-   
-     $("document").ready(letsgo);
-     
-	    
-    
-
-
+    <script src="js/protobot.js" type="text/javascript">
     </script>
 </head>
 
@@ -99,16 +31,18 @@ var onupdate = function(data){
     <div class="megawrapper">
         <div class="header-bar">
             <div class="header-content">
-                <span class="sitename">Protobot</span> generates random product and service ideas. <span class="author author-bigscreen"><a href="http://molly.is/writing/protobot/">How & why to use it.</a> By <a href="http://molly.is">Molly</a>.</span><span class="author author-smallscreen"><a href="http://molly.is/writing/protobot/">Why?</a></span>
+                <span class="header-text"></span>
 
                 <div class="header-language">
-                    <i class="fa fa-globe">&nbsp;</i><i class="fa fa-angle-down">&nbsp;</i>
+                    <i class="fa fa-globe">&nbsp;</i><span class="current-language"></span>
                     
                     <div class="language-dropdown">
 	    <ul>
-		    <li class="selected" id="en"><a href="">English</a></li>
-			<li id="de"><a href="">Deutsch</a></li>
-			<li class="github"><a href="https://github.com/mollyclare/protobot">Add another language?</a></li>
+		    <li class="selected" id="en"><a href="#">English</a></li>
+			<li id="de"><a href="#">Deutsch</a></li>
+			<li id="es"><a href="#">Español</a></li>
+			<li id="zh"><a href="#">普通话</a></li>
+			<li class="github"><a href="https://github.com/mollyclare/protobot">GitHub</a></li>
 	    </ul>
     </div>
                     
@@ -136,7 +70,7 @@ var onupdate = function(data){
             </div>
 
             <div class="nextbutton button">
-                <span class="author"><a href="#" onclick='letsgo();'>Randomize</a></span>
+                <span class="author"><a href="#" onclick='render();'>Randomize</a></span>
             </div>
         </div>
     </div>

@@ -1,6 +1,10 @@
-# - * - codierung: utf-8 - * -
-ITEM = [
-"ein Bett, das",
+{
+"languageFull" : "Deutsch",
+"headerHtml" : "<span class='sitename'>Protobot</span> bietet zufällig generierte Produkt- und Dienstleistung-Ideen an. <span class='author author-bigscreen'><a href='http://molly.is/writing/protobot/'>Warum?</a> Von <a href='http://molly.is'>Molly</a>.</span><span class='author author-smallscreen'><a href='http://molly.is/writing/protobot/'>Warum?</a>",
+"prependText": "Gestalte",
+"buttonText" : "nochmal",
+"items":
+	["ein Bett, das",
 "eine Yoga-Matte, die",
 "einen Kalender, den",
 "einen Lippenstift, den",
@@ -40,7 +44,7 @@ ITEM = [
 "einen Taschenrechner, den",
 "eine Karte, die",
 "eine Angelrute, die",
-"eine Wettervorhersage, die"
+"eine Wettervorhersage, die",
 "einen Gemüsegarten, den",
 "eine Kaffeemaschine, die",
 "eine Lampe, die",
@@ -153,13 +157,12 @@ ITEM = [
 "eine Mittagsmahlzeit für Schulen, die",
 "einen Handschuh, den",
 "einen Weihnachtsschmuck, den",
-"ein Minzbonbon, das"
-]
-
-
-CONSTRAINT = [
-"Du als illegal beschreiben würdest",
-"Du nicht durch die Sicherheitkontrolle am Flughafen nehmen kannst"
+"ein Minzbonbon, das",
+"einen Klingelton, den"
+],
+"constraints":
+	["Du als illegal beschreiben würdest",
+"Du nicht durch die Sicherheitkontrolle am Flughafen nehmen kannst",
 "Du nutzen kannst, um Deine Nachbarn verrückt zu machen",
 "Du in der U-Bahn benutzen kannst",
 "Deine Großeltern sicher missbilligen würden",
@@ -178,10 +181,10 @@ CONSTRAINT = [
 "für einen Sportfan",
 "Du nutzen kannst, um ein nostalgisches Gefühl zu bekommen",
 "Du nutzen kannst, um ein Schwindelgefühle zu erzeugen",
-"Du nicht kontrollieren kannst"
+"Du nicht kontrollieren kannst",
 "Du viel komplizierter machst, als es eigentlich nötig wäre",
 "für ein Baby",
-"Du nutzt kannst, um Deinen Fingern eine (sinnvolle) Beschäftigung zu geben"
+"Du nutzen kannst, um Deinen Fingern eine (sinnvolle) Beschäftigung zu geben",
 "für die Veranschaulichung der damit verbundenen Umweltbelastung",
 "Du nicht kontrollieren kannst",
 "Du gruselig findest",
@@ -191,14 +194,14 @@ CONSTRAINT = [
 "Du zur Selbstverteidigung verwenden kannst",
 "Du als sehr zerbrechlich beschreiben würdest",
 "Du wirklich verwirrend findest",
-"Du mit Deinen Füßen nutzen kannst"
+"Du mit Deinen Füßen nutzen kannst",
 "Du auf Deinem Kopf tragen kannst",
-"Du auf Deinen Atem reagieren lassen kannst"
+"Du auf Deinen Atem reagieren lassen kannst",
 "Du auf Sprachbefehle reagieren lassen kannst",
 "Du für das Sammeln von Punkten / Belohnungen nutzen kannst",
 "für eine gemeinsame Wohnung",
 "für jemanden in großer Eile",
-"Du werfen kannst"
+"Du werfen kannst",
 "Du treten / kicken kannst",
 "Du zum Erzeugen von guter Laune nutzen kannst",
 "Du zum Erzeugen von Lärm nutzen kann",
@@ -214,7 +217,7 @@ CONSTRAINT = [
 "Du von der Decke hängen lassen kannst",
 "Du wegwerfen kannst",
 "Du auch als Mode(accessoire) nutzen kannst",
-"Du abhängig von Deinem Standort benutzen musst"
+"Du abhängig von Deinem Standort benutzen musst",
 "Du essen kannst",
 "Du nutzen kannst, um Menschen zum freundlichen Umgang mit Fremden anzuregen",
 "für die Anregung Deines Geruchssinns",
@@ -226,16 +229,16 @@ CONSTRAINT = [
 "für den Strand",
 "Du in einen Kinderwagen integieren kannst",
 "Du mit einem Streichholz angezünden musst",
-"Du zum \"Betrunken-werden\" nutzen kannst",
-"Du als Wecker nutzen kannst"
+"Du zum 'Betrunken-werden' nutzen kannst",
+"Du als Wecker nutzen kannst",
 "Du für die Pflege Deiner Zähne nutzen kannst",
-"für eine/n 6-Jährige/n"
+"für eine/n 6-Jährige/n",
 "für eine/n Tiefsee-Taucher/in",
-"für eine/n 80-Jährige/n"
+"für eine/n 80-Jährige/n",
 "für einen Teenager",
 "für eine Gruppe von Freunden",
 "Du jedes Mal für die Verwendung neu zusammenbauen musst",
-"Du zur Beruhigung einsetzen kannst"
+"Du zur Beruhigung einsetzen kannst",
 "Du in ein Auto integrieren kannst",
 "Du in ein Fahrrad integrieren kannst",
 "Du in einen Flugzeugsitz integrieren kannst",
@@ -244,11 +247,11 @@ CONSTRAINT = [
 "Du nutzen kannst, um eine andere Sprache zu lernen",
 "für einen Hund",
 "für einen Affen",
-"Du nutzen kannst, um eine neue Ausdrucksformen zu erlernen"
+"Du nutzen kannst, um eine neue Ausdrucksformen zu erlernen",
 "Du mit geschlossenen Augen benutzen kannst",
 "Du nur unter Zuhilfenahme von virtueller Realität nutzen kannst",
 "Du nutzen kannst, um Dir einen Adrenalinschub zu verpassen",
-"Du mieten kannst"
+"Du mieten kannst",
 "Du zur Verbesserung Deiner Hand-Augen-Koordination nutzen kannst",
 "Du aufblasen kannst",
 "Du fernsteuern kannst",
@@ -282,7 +285,7 @@ CONSTRAINT = [
 "Du als Denkmal für eine bedeutende Persönlichkeit ansiehst",
 "für eine/n Patient/in im Krankenhaus",
 "für eine/n Taxifahrer/in",
-"für eine/n Steinmetz/in"
+"für eine/n Steinmetz/in",
 "Du als freundlich und sanft beschreiben würdest",
 "für einen Rockstar",
 "für eine/n Schullehrer/in",
@@ -300,5 +303,7 @@ CONSTRAINT = [
 "für einen Delphin",
 "Dein/e Chef/in nicht genehmigen würde",
 "Du zum Schutz Deiner persönlichen Daten nutzen kannst",
-"Du zum Geldverdienen nutzen kannst"
-]
+"Du zum Geldverdienen nutzen kannst",
+"für eine/n Matrose/in"
+	]	
+}
