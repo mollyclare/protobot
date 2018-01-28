@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
 <html>
 <head>
-	<meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="protobot.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="protobot.css">     <link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
 
     <title>Protobot: randomly generated design challenges</title>
@@ -12,9 +12,12 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39317711-2"></script>
+
+
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.min.css" type="text/css"><!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39317711-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,36 +26,39 @@
   gtag('config', 'UA-39317711-2');
 </script>
 
+
     <script src="js/protobot.js" type="text/javascript">
-    </script>
+</script>
 </head>
 
 <body>
     <div class="megawrapper">
         <div class="header-bar">
             <div class="header-content">
-                <span class="header-text"></span>
+                <span class="header-text">&nbsp;</span>
+                
 
                 <div class="header-language">
-                    <i class="fa fa-globe">&nbsp;</i><span class="current-language"></span>
-                    
-                    <div class="language-dropdown">
-	    <ul>
-		    <li class="selected" id="en"><a href="#">English</a></li>
-			<li id="de"><a href="#">Deutsch</a></li>
-			<li id="es"><a href="#">Español</a></li>
-			<li id="zh"><a href="#">普通话</a></li>
-			<li class="github"><a href="https://github.com/mollyclare/protobot">GitHub</a></li>
-	    </ul>
-    </div>
+                    <div class="language-shown"><i class="fa fa-globe">&nbsp;</i><span class="current-language">&nbsp;</span></div>
+<div class="language-dropdown">
+                        <ul>
+                            <li class="selected" id="en"><a href="#">English</a></li>
+
+                            <li id="de"><a href="#">Deutsch</a></li>
+
+<!--
+                            <li id="es"><a href="#">Español</a></li>
+
+                            <li id="zh"><a href="#">普通话</a></li>
+-->
+
+                            
+                        </ul>
+                    </div>
                     
                 </div>
-                 
             </div>
-            
         </div>
-        
-        
 
         <div class="wrapper">
             <div class="randomized-text">
@@ -70,13 +76,10 @@
             </div>
 
             <div class="nextbutton button">
-                <span class="author"><a href="#" onclick='render();'>Randomize</a></span>
+                <span class="author"><a href="#" onclick='render();'>&nbsp;</a></span>
             </div>
+          
         </div>
-    </div>
-    
-   
-    
-    <!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+    </div><!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
 </body>
 </html>

@@ -11,19 +11,30 @@ body {
   body {
     font-size: 3.3em; }
   .header-content {
-    width: 70%;
-    margin: 0 5% 0 5%; }
+    border: 1px solid #f0f; }
+    .header-content .header-text {
+      display: block;
+      margin: 0 15% 0 5%;
+      max-width: 70%;
+      border: 1px solid #ff0; }
     .header-content .author-bigscreen {
       display: none; }
   .current-language {
     display: none; }
   .fa-angle-down.fa {
     display: none; }
+  .fa-globe.fa {
+    font-size: 200%;
+    text-align: right; }
+  .language-shown {
+    position: absolute;
+    right: .2em;
+    top: 1.3em; }
   .language-dropdown {
+    border: 1px solid #00f;
     display: none;
-    width: 18em;
-    font-size: .9em;
-    top: 3em; }
+    position: relative;
+    right: -2%; }
   .wrapper {
     width: 90%;
     margin: 0 5% 0 5%; }
@@ -33,15 +44,15 @@ body {
 @media (min-width: 700px) {
   body {
     font-size: 5em; }
-  .header-content {
+  .header-text {
     width: 65%;
-    margin: 0 10% 0 10%; }
-    .header-content .author-smallscreen {
+    margin: 0 10% 0 10%;
+    display: block; }
+    .header-text .author-smallscreen {
       display: none; }
-  .language-dropdown {
-    width: 9em;
-    font-size: .6em;
-    top: 3em; }
+  .language-shown {
+    top: .4em;
+    right: 2em; }
   .wrapper {
     width: 80%;
     margin: 0 10% 0 10%; }
@@ -69,17 +80,17 @@ div.header-bar {
       div.header-bar .header-content .author a {
         color: #968e84;
         border-bottom: 1px solid #968e84; }
-    div.header-bar .header-content .header-language {
+    div.header-bar .header-content .language-shown {
       font-size: .9em;
       position: absolute;
       font-weight: 200;
-      top: .4em;
-      right: .6em;
       cursor: pointer; }
-      div.header-bar .header-content .header-language .fa {
+      div.header-bar .header-content .language-shown:hover {
+        color: #222; }
+      div.header-bar .header-content .language-shown .fa {
         padding: 0 0.3em; }
   div.header-bar a:hover {
-    border-bottom: 1px solid #968e84; }
+    color: #222; }
 
 div.wrapper .randomized-text #intro {
   display: inline;
@@ -116,17 +127,16 @@ div.button:hover {
   background-color: #215563; }
 
 div.language-dropdown {
-  position: absolute;
-  right: 0em;
-  padding: 1em;
-  margin: 0;
-  background-color: #ebe3d9;
-  border: 1px solid #d0c3b2;
-  font-weight: 200;
+  margin: 0 2em 0 0;
+  font-size: .9em;
+  background-color: #d0c3b3;
   display: block;
+  font-weight: 200;
   text-align: right; }
   div.language-dropdown ul {
     list-style-type: none;
     margin: 0; }
     div.language-dropdown ul li {
-      margin: .2em 0; }
+      display: block; }
+    div.language-dropdown ul li.current {
+      display: none; }

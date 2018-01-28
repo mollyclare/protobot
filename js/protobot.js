@@ -10,8 +10,20 @@ var protobotter = {
 	buttonText: "",
 	prependText: ""
 }
+
+
 	
 function initialize() {
+	
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UUA-39317711-2', 'auto');
+ga('send', 'pageview');
+	
+	
 	var url = window.location.hash;
 	var language = "";
 	if (url.includes("de")){
@@ -24,13 +36,22 @@ function initialize() {
 		language = "en";
 	}
 	
-	load_words(language);
+	setLanguage(language);
+	
 	protobotter.loaded = true;
 	
+}
+
+function setLanguage(language){
+	load_words(language);
 	
 	 // dropdown code
-     $( ".language-dropdown").hide();
-	  var menuShown = false;
+    $( ".language-dropdown").hide();
+	$(".language-dropdown li").removeClass("current");
+	// hide link that matches the currently selected language
+	$(".language-dropdown li#"+ language).addClass("current");
+	console.log(language);
+	 var menuShown = false;
 	    $(".header-language").click(function(){
 		    if(menuShown == false){
 			    $(".language-dropdown").show();
@@ -46,12 +67,10 @@ function initialize() {
 		   language = languageClicked;
 		   window.location.hash = language;
 		   $(".language-dropdown").hide();
-		   load_words(language);
-		   
+		   setLanguage(language);
 		    menuShown = false;
 		    
 	    })
-	
 }
 
 function load_words(language){
@@ -70,7 +89,7 @@ function load_words(language){
 		protobotter.buttonText = json.buttonText;
 		protobotter.prependText = json.prependText;
 		
-		// render header
+		// render header and button
 		$(".header-text").text("");
 		$(".header-text").prepend(protobotter.headerHtml);
 		$(".current-language").text(protobotter.languageFull);
@@ -83,6 +102,9 @@ function load_words(language){
 }
 
 function render() {
+// google analytics
+
+ga('send', 'event', 'button', 'render', protobotter.language);	
 // how many entries are there?
 var r1 = Math.floor(Math.random() * (protobotter.items.length));
 var r2 = Math.floor(Math.random() * (protobotter.constraints.length));
@@ -114,7 +136,6 @@ var designConstraint = protobotter.constraints[r2];
 	  
 		// if there is a "für", we delete the "der/die/das"
 		var str2 = $("#constraint").text();
-		console.log(str2);
 		if (str2.search("für") > -1){
 			if (str.search(", die") > -1){ 
 			str = str.replace(", die","");
