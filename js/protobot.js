@@ -50,7 +50,6 @@ function setLanguage(language){
 	$(".language-dropdown li").removeClass("current");
 	// hide link that matches the currently selected language
 	$(".language-dropdown li#"+ language).addClass("current");
-	console.log(language);
 	 var menuShown = false;
 	    $(".header-language").click(function(){
 		    if(menuShown == false){
