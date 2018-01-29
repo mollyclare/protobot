@@ -63,6 +63,7 @@ function setLanguage(language){
 	    })
 	    $(".language-dropdown").click(function(e){
 		   var languageClicked = $(e.target).parents("li").attr("id");
+		  
 		   language = languageClicked;
 		   window.location.hash = language;
 		   $(".language-dropdown").hide();
@@ -103,7 +104,7 @@ function load_words(language){
 function render() {
 // google analytics
 
-ga('send', 'event', 'button', 'render', protobotter.language);	
+ga('send', 'event', 'button', 'render', protobotter.language);
 // how many entries are there?
 var r1 = Math.floor(Math.random() * (protobotter.items.length));
 var r2 = Math.floor(Math.random() * (protobotter.constraints.length));
@@ -122,20 +123,43 @@ var designConstraint = protobotter.constraints[r2];
 
     $("#constraint").html("");
     $("#constraint").text(designConstraint);
-    $("#constraint").append(".");
+    
     $(".language-dropdown").hide();
+    
+    var str = $("#design-item").text(); 
+    var str2 = $("#constraint").text();
+    
+    // English
+    if(protobotter.language == "en"){
+	    $("#constraint").append(".");
+    }
+    
+    // Chinese
+    
+    if (protobotter.language == "zh"){
+	    $("#design-item").remove();
+	    $("#constraint").remove();
+	    if (str2.search("为") == 0){
+		    $("#intro").before("<div id='constraint'>"+str2+"</div>");
+			$("#intro").after("<div id='design-item'>"+str+".</div>");
+			
+	    } else {
+			$("#intro").after("<div id='design-item'>"+str+"</div>");
+			$("#design-item").after("<div id='constraint'>"+str2+".</div>");
+	    }
+    }
     
     // Deutsche Sprache, Schwere Sprache
     if (protobotter.language == "de"){
-		
 	    
+	    $("#constraint").append(".");
 	    
 	    // we have to find a few key phrases and hide them 
-	    var str = $("#design-item").text(); 
-	  
+	    
+
 		// if there is a "für", we delete the "der/die/das"
-		var str2 = $("#constraint").text();
-		if (str2.search("für") > -1){
+		
+		if (str2.search("für") == 0){
 			if (str.search(", die") > -1){ 
 			str = str.replace(", die","");
 			} 
@@ -146,7 +170,7 @@ var designConstraint = protobotter.constraints[r2];
 			str = str.replace(", das",""); 
 			}
 		}
-		
+
 		// make the ending den/die/das blue
 		if (str.search(", die") > -1){ 
 			str = str.replace(", die",", <span class='de-temp'>die</span>");

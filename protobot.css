@@ -10,15 +10,12 @@ body {
 @media (max-width: 700px) {
   body {
     font-size: 3.3em; }
-  .header-content {
-    border: 1px solid #f0f; }
-    .header-content .header-text {
-      display: block;
-      margin: 0 15% 0 5%;
-      max-width: 70%;
-      border: 1px solid #ff0; }
-    .header-content .author-bigscreen {
-      display: none; }
+  .header-content .header-text {
+    display: block;
+    margin: 0 15% 0 5%;
+    max-width: 70%; }
+  .header-content .author-bigscreen {
+    display: none; }
   .current-language {
     display: none; }
   .fa-angle-down.fa {
@@ -31,7 +28,6 @@ body {
     right: .2em;
     top: 1.3em; }
   .language-dropdown {
-    border: 1px solid #00f;
     display: none;
     position: relative;
     right: -2%; }

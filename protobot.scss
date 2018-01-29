@@ -26,13 +26,13 @@ body {
 
 	.header-content {
 		
-		border: 1px solid #f0f;
+		
 		.header-text {
 			display: block;
 					margin: 0 ($small-screen-width-margin + 10%) 0 $small-screen-width-margin;
 
 			max-width: $small-screen-width-percent - 20%;
-			border: 1px solid #ff0;
+			
 		}
 		.author-bigscreen {
 			display:none;
@@ -57,7 +57,7 @@ body {
 		top: 1.3em;
 	}
 	.language-dropdown {
-		border: 1px solid #00f;
+		
 		display: none;
 		position: relative;
 		right: -2%;
