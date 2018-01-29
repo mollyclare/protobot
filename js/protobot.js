@@ -44,6 +44,7 @@ ga('send', 'pageview');
 
 function setLanguage(language){
 	load_words(language);
+	ga('set', 'language', language);
 	
 	 // dropdown code
     $( ".language-dropdown").hide();
@@ -104,12 +105,16 @@ function load_words(language){
 function render() {
 // google analytics
 
-ga('send', 'event', 'button', 'render', protobotter.language);
-// how many entries are there?
-var r1 = Math.floor(Math.random() * (protobotter.items.length));
-var r2 = Math.floor(Math.random() * (protobotter.constraints.length));
-var designItem = protobotter.items[r1];
-var designConstraint = protobotter.constraints[r2];
+	ga('send', {
+	 	hitType: 'event',
+		eventCategory: 'click',
+		eventAction: 'render'
+	});
+	// how many entries are there?
+	var r1 = Math.floor(Math.random() * (protobotter.items.length));
+	var r2 = Math.floor(Math.random() * (protobotter.constraints.length));
+	var designItem = protobotter.items[r1];
+	var designConstraint = protobotter.constraints[r2];
 
 // updates the text
 
@@ -140,7 +145,6 @@ var designConstraint = protobotter.constraints[r2];
     }
     
     // Chinese is a bit different but not too complicated
-    
     if (protobotter.language == "zh"){
 	    $("#design-item").remove();
 	    $("#constraint").remove();
@@ -156,7 +160,7 @@ var designConstraint = protobotter.constraints[r2];
     
     // Deutsche Sprache, Schwere Sprache
     if (protobotter.language == "de"){
-	    
+	    $("#design-item").append(" ");
 	    $("#constraint").append(".");
 	    
 	    // we have to find a few key phrases and hide them 
