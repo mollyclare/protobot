@@ -9,9 +9,9 @@ Recently featured in the Frankfurter Allgemeine Zeitung: http://www.faz.net/aktu
 
 German translation by Jan Koch.
 
-Spanish translation (coming soon!) by Lara Rosety.
+Spanish translation by Lara Rosety Jiménez de Parga.
 
-Mandarin translation (coming soon!) by Cheng Yao, Yani Guo, and Xinyu Ruby Ren.
+Chinese translation by Cheng Yao, Yani Guo, and Xinyu Ruby Ren.
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
