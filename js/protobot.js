@@ -129,12 +129,17 @@ var designConstraint = protobotter.constraints[r2];
     var str = $("#design-item").text(); 
     var str2 = $("#constraint").text();
     
-    // English
+    // English is easy
     if(protobotter.language == "en"){
 	    $("#constraint").append(".");
     }
     
-    // Chinese
+    // Español es fácil
+    if(protobotter.language == "es"){
+	    $("#constraint").append(".");
+    }
+    
+    // Chinese is a bit different but not too complicated
     
     if (protobotter.language == "zh"){
 	    $("#design-item").remove();
