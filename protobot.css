@@ -21,19 +21,18 @@ body {
   .fa-angle-down.fa {
     display: none; }
   .fa-globe.fa {
-    font-size: 200%;
+    font-size: 150%;
     text-align: right; }
   .language-shown {
     position: absolute;
-    right: .2em;
-    top: 1.3em; }
+    right: .2em; }
   .language-dropdown {
     display: none;
     position: relative;
     right: -2%; }
   .wrapper {
     width: 90%;
-    margin: 0 5% 0 5%; }
+    margin: 0 5% 10% 5%; }
   .wrapper.de {
     font-size: 80%; } }
 
@@ -51,9 +50,17 @@ body {
     right: 2em; }
   .wrapper {
     width: 80%;
-    margin: 0 10% 0 10%; }
+    margin: 0 10% 10% 10%; }
   .wrapper.de {
     font-size: 80%; } }
+
+@media (max-width: 533px) {
+  .language-shown {
+    top: 1.3em; } }
+
+@media (min-width: 534px) and (max-width: 699px) {
+  .language-shown {
+    top: .7em; } }
 
 div.megawrapper {
   margin: 0 auto; }

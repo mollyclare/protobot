@@ -119,11 +119,10 @@ function render() {
 // updates the text
 
     $("#intro").html("");
-    $("#intro").text(protobotter.prependText + " ");
+    $("#intro").text(protobotter.prependText);
 
 
     $("#design-item").html("");
-
     $("#design-item").text(designItem);
 
     $("#constraint").html("");
@@ -136,6 +135,8 @@ function render() {
     
     // English is easy
     if(protobotter.language == "en"){
+	    $("#intro").append(" ");
+	    $("#design-item").append(" ");
 	    $("#constraint").append(".");
 	    if (str.search("a") == 0 || str.search("e") == 0 || str.search("i") == 0 || str.search("o") == 0 || str.search("u") == 0 ){
 		    $("#intro").append("n");
@@ -144,6 +145,8 @@ function render() {
     
     // Español es fácil
     if(protobotter.language == "es"){
+	    $("#intro").append(" ");
+	    $("#design-item").append(" ");
 	    $("#constraint").append(".");
     }
     
@@ -152,19 +155,20 @@ function render() {
 	    $("#design-item").remove();
 	    $("#constraint").remove();
 	    if (str2.search("为") == 0){
+		    
 		    $("#intro").before("<div id='constraint'>"+str2+"</div>");
-			$("#intro").after("<div id='design-item'>"+str+".</div>");
+			$("#intro").after("<div id='design-item'>"+str+"。</div>");
 			
 	    } else {
 			$("#intro").after("<div id='design-item'>"+str+"</div>");
-			$("#design-item").after("<div id='constraint'>"+str2+".</div>");
+			$("#design-item").after("<div id='constraint'>"+str2+"。</div>");
 	    }
     }
     
     // Deutsche Sprache, Schwere Sprache
     if (protobotter.language == "de"){
-	    $("#design-item").append(" ");
-	    $("#constraint").append(".");
+	    $("#intro").append(" ");
+	    
 	    
 	    // we have to find a few key phrases and hide them 
 	    
@@ -194,7 +198,10 @@ function render() {
 			str = str.replace(", das",", <span class='de-temp'>das</span>");
 			}
 		 
-		$("#design-item").html(str); 
+		$("#design-item").html(str);
+		$("#design-item").append(" ");
+	    $("#constraint").append(".");
+	     
 		
 	    
     }

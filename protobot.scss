@@ -48,13 +48,13 @@ body {
 			display: none;
 		}
 		.fa-globe.fa{
-			font-size: 200%;
+			font-size: 150%;
 			text-align: right;
 		}
 	.language-shown {
 		position: absolute;
 		right: .2em;
-		top: 1.3em;
+		
 	}
 	.language-dropdown {
 		
@@ -66,7 +66,7 @@ body {
 	
 	.wrapper {
 		width: $small-screen-width-percent;
-		margin: 0 $small-screen-width-margin 0 $small-screen-width-margin;
+		margin: 0 $small-screen-width-margin 10% $small-screen-width-margin;
 
 	}
 	.wrapper.de {
@@ -102,11 +102,26 @@ body {
 	}
 	.wrapper {
 		width: $big-screen-width-percent;
-		margin: 0 $big-screen-width-margin 0 $big-screen-width-margin;
+		margin: 0 $big-screen-width-margin 10% $big-screen-width-margin;
 		}
 	.wrapper.de {
 		font-size: 80%;
 	}
+}
+
+@media (max-width: 533px) {
+	.language-shown {
+		top: 1.3em;
+	}
+}
+
+// SOME WACKNESS FOR MID-SIZE SCREENS 
+
+@media (min-width: 534px) and (max-width: 699px) {
+	.language-shown {
+		top: .7em;
+	}
+
 }
 
 

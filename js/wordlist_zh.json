@@ -1,8 +1,8 @@
 {
 "languageFull" : "普通话",
-"headerHtml" : "<span class='sitename'>Protobot</span> 产生随机产品和服务的想法. <span class='author author-bigscreen'><a href='http://molly.is/writing/protobot/'>为什么</a> Created by <a href='http://molly.is'>Molly</a> and translated by Xinyu Ren and Cheng Yao. </span><span class='author author-smallscreen'><a href='http://molly.is/writing/protobot/'>为什么</a>",
+"headerHtml" : "<span class='sitename'>Protobot</span>生成随机的产品/服务创意。<span class='author author-bigscreen'>Created by <a href='http://molly.is/writing/protobot/'>Molly</a>, translated by Xinyu Ren and Cheng Yao. </span><span class='author author-smallscreen'><a href='http://molly.is/writing/protobot/'>By Molly.</a>",
 "prependText": "设计一种",
-"buttonText" : "混乱",
+"buttonText" : "随机",
 "items":
 	["床",
 "瑜伽垫",
