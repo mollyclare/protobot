@@ -137,6 +137,9 @@ function render() {
     // English is easy
     if(protobotter.language == "en"){
 	    $("#constraint").append(".");
+	    if (str.search("a") == 0 || str.search("e") == 0 || str.search("i") == 0 || str.search("o") == 0 || str.search("u") == 0 ){
+		    $("#intro").append("n");
+	    }
     }
     
     // Español es fácil
