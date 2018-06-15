@@ -150,18 +150,16 @@ function render() {
 	    $("#constraint").append(".");
     }
     
-    // Chinese is a bit different but not too complicated
+// Chinese is a bit different but not too complicated
     if (protobotter.language == "zh"){
 	    $("#design-item").remove();
 	    $("#constraint").remove();
 	    if (str2.search("为") == 0){
-		    
-		    $("#intro").before("<div id='constraint'>"+str2+"</div>");
+			$("#intro").before("<div id='constraint'>"+str2+"</div>");
 			$("#intro").after("<div id='design-item'>"+str+"。</div>");
-			
 	    } else {
-			$("#intro").after("<div id='design-item'>"+str+"</div>");
-			$("#design-item").after("<div id='constraint'>"+str2+"。</div>");
+			$("#intro").after("<div id='design-item'>"+str+"。</div>");
+			$("#design-item").before("<div id='constraint'>"+str2+"</div>");
 	    }
     }
     
