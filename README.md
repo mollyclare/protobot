@@ -13,6 +13,8 @@ Spanish translation by Lara Rosety Jiménez de Parga.
 
 Chinese translation by Cheng Yao, Yani Guo, and Xinyu Ruby Ren.
 
+Note that there is a "safe mode" in English, without phrases that invoke or might imply alcohol, drugs, romance/sex, or death. However, toilet humor is still fair game.
+
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 Feel free to use the content or the code, as long as:
