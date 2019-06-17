@@ -25,6 +25,7 @@ ga('send', 'pageview');
 	
 	
 	var url = window.location.hash;
+
 	var language = "";
 	if (url.includes("de")){
 		language = "de";
@@ -70,7 +71,7 @@ function setLanguage(language){
 		   var languageClicked = $(e.target).parents("li").attr("id");
 		  
 		   language = languageClicked;
-		   window.location.hash = language;
+		   
 		   $(".language-dropdown").hide();
 		   setLanguage(language);
 		    menuShown = false;
@@ -98,7 +99,7 @@ function load_words(language){
 		$(".header-text").text("");
 		$(".header-text").prepend(protobotter.headerHtml);
 		$(".current-language").text(protobotter.languageFull);
-		$(".nextbutton .author a").text(protobotter.buttonText);
+		$(".nextbutton .author .buttontext").text(protobotter.buttonText);
 		
 		// render page body
 		render();
@@ -107,13 +108,19 @@ function load_words(language){
 }
 
 function render() {
+	
+	
 // google analytics
-
 	ga('send', {
 	 	hitType: 'event',
 		eventCategory: 'click',
 		eventAction: 'render'
 	});
+	
+	// update the URL to match current language
+	window.location.hash = "#"+protobotter.language;
+	
+
 	// how many entries are there?
 	var r1 = Math.floor(Math.random() * (protobotter.items.length));
 	var r2 = Math.floor(Math.random() * (protobotter.constraints.length));
@@ -136,6 +143,7 @@ function render() {
     
     var str = $("#design-item").text(); 
     var str2 = $("#constraint").text();
+    
     
     // English is easy
     if(protobotter.language == "en"){
@@ -179,7 +187,7 @@ function render() {
 	    }
     }
     
-    // Deutsche Sprache, Schwere Sprache
+    // Deutsche Sprache, schwere Sprache
     if (protobotter.language == "de"){
 	    $("#intro").append(" ");
 	    
@@ -215,7 +223,7 @@ function render() {
 		$("#design-item").html(str);
 		$("#design-item").append(" ");
 	    $("#constraint").append(".");
-	     
+	    
 		
 	    
     }

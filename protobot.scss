@@ -214,9 +214,10 @@ div.button {
 	margin-right: 2em;
 	background-color: #2B7182;
 	color: #fff;
-	a {
-		color: #fff;
 		text-decoration: none;
+		cursor: pointer;
+	a {
+		
 	}
 }
 div.button:hover {
