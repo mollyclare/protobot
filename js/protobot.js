@@ -32,7 +32,11 @@ ga('send', 'pageview');
 		language = "es"
 	} else if (url.includes("zh")){
 		language = "zh"
-	} else {
+	} 
+	else if (url.includes("en-sfw")){
+		language = "en-sfw"
+	} 
+	else {
 		language = "en";
 	}
 	
@@ -75,7 +79,7 @@ function setLanguage(language){
 }
 
 function load_words(language){
-	$(".wrapper").removeClass("de", "en", "es", "zh");
+	$(".wrapper").removeClass("de", "en", "es", "zh", "en-sfw");
 	$(".wrapper").addClass(language);
 	
 	// create word list
@@ -135,11 +139,23 @@ function render() {
     
     // English is easy
     if(protobotter.language == "en"){
+	    $("#design-item").append(" ");
+	    $("#constraint").append(".");
+	    if (str.search("a") == 0 || str.search("e") == 0 || str.search("i") == 0 || str.search("o") == 0 || str.search("u") == 0 ){
+		    $("#intro").append("n ");
+	    } else {
+		    $("#intro").append(" ");
+	    }
+    }
+    
+    if(protobotter.language == "en-sfw"){
 	    $("#intro").append(" ");
 	    $("#design-item").append(" ");
 	    $("#constraint").append(".");
 	    if (str.search("a") == 0 || str.search("e") == 0 || str.search("i") == 0 || str.search("o") == 0 || str.search("u") == 0 ){
-		    $("#intro").append("n");
+		    $("#intro").append("n ");
+	    } else {
+		    $("#intro").append(" ");
 	    }
     }
     
