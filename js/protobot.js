@@ -15,13 +15,6 @@ var protobotter = {
 	
 function initialize() {
 	
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UUA-39317711-2', 'auto');
-ga('send', 'pageview');
 	
 	
 	var url = window.location.hash;
@@ -49,7 +42,6 @@ ga('send', 'pageview');
 
 function setLanguage(language){
 	load_words(language);
-	ga('set', 'language', language);
 	
 	 // dropdown code
     $( ".language-dropdown").hide();
@@ -110,12 +102,6 @@ function load_words(language){
 function render() {
 	
 	
-// google analytics
-	ga('send', {
-	 	hitType: 'event',
-		eventCategory: 'click',
-		eventAction: 'render'
-	});
 	
 	// update the URL to match current language
 	window.location.hash = "#"+protobotter.language;
